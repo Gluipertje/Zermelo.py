@@ -42,7 +42,7 @@ To get your pull request into our code just add something valuable to it and it 
 
 ## Authors
 
-* **Robin van Ruitenbeek** - [Gluipertje](https://github.com/MIUPC)
+* **Robin van Ruitenbeek** - [Gluipertje](https://github.com/Gluipertje)
 
 ## License
 
