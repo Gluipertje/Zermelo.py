@@ -15,7 +15,7 @@ In Arch Linux:
 sudo pacman -S python
 ```
 
-In windows just download Puthon via an installer found [here](https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe)
+In windows just download Python via an installer found [here](https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe)
 
 ### Installing
 
