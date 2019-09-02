@@ -37,7 +37,7 @@ else:
 
 while True:
     try:
-        starttime = input('Please enter the time from which you want to know your appointments in this format: DD/MM/YYY, Example: 06/1/2019: ')
+        starttime = input('Please enter the time from which you want to know your appointments in this format: DD/MM/YYYY, Example: 06/1/2019: ')
         starttime = time.mktime(datetime.datetime.strptime(starttime, "%d/%m/%Y").timetuple())
 
         endtime = str(round(starttime + 86400))
