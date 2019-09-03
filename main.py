@@ -4,8 +4,9 @@ import datetime
 import time
 from prettytable import PrettyTable
 
-tokenr = open('token.txt', 'r')
-token = tokenr.read()
+filer = open('token.txt', 'r')
+tokenschool = filer.read()
+token = tokenschool[0:26]
 
 if len(token) != 26:
     while True:
@@ -17,27 +18,23 @@ if len(token) != 26:
 
             school = input('Enter school id (You can find it by going to the portal of your school and selecting the part between the https and the first dot. Example: bc-enschede):')
             url = "https://" + school + ".zportal.nl/api/v2/"
-            schoolw = open('school.txt', 'w')
-            schoolw.write(school)
-            schoolw.close
             
             token = requests.post(url + "oauth/token", data={"grant_type":"authorization_code", "code":API_key}).json()
             token = token['access_token']
             tokenw = open('token.txt', 'w')
-            tokenw.write(token)
+            tokenw.write(token + ' ' + school)
             tokenw.close()
             break
         except:
             print('Wrong code or schoolcode or the zermelo is down... Try again momentarily...')
 else:
-    schoolr = open('school.txt', 'r')
-    school = schoolr.read()
+    school = tokenschool[27:]
     url = "https://" + school + ".zportal.nl/api/v2/"
     print("You're logged in into: "+url)
 
 while True:
     try:
-        starttime = input('Please enter the time from which you want to know your appointments in this format: DD/MM/YYYY, Example: 06/1/2019: ')
+        starttime = input('Please enter the time from which you want to know your appointments in this format: DD/MM/YYY, Example: 06/1/2019: ')
         starttime = time.mktime(datetime.datetime.strptime(starttime, "%d/%m/%Y").timetuple())
 
         endtime = str(round(starttime + 86400))
