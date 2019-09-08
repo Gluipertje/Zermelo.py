@@ -11,7 +11,7 @@ token = tokenschool[0:26]
 if len(token) != 26:
     while True:
         try:
-            tokenr.close()
+            filer.close()
             API_key =  input ("Enter Authorization key here, you can find it in the 'Koppel App' section of the portal:")
             API_key = API_key.replace(" ", "")
             print(API_key)
