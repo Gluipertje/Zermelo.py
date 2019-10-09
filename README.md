@@ -46,7 +46,7 @@ To get your pull request into our code just add something valuable to it and it 
 
 ## License
 
-This project is licensed under the GPL 3.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL 3.0 - see the [LICENSE.md](https://github.com/Gluipertje/Zermelo.py/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
