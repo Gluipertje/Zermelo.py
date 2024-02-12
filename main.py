@@ -16,7 +16,7 @@ if len(token) != 26:
             API_key = API_key.replace(" ", "")
             print(API_key)
 
-            school = input('Enter school id (You can find it by going to the portal of your school and selecting the part between the https and the first dot. Example: bc-enschede):')
+            school = input('Enter school id (You can find it by going to the portal of your school and selecting the part between the https and the first dot.):')
             url = "https://" + school + ".zportal.nl/api/v2/"
             
             token = requests.post(url + "oauth/token", data={"grant_type":"authorization_code", "code":API_key}).json()
